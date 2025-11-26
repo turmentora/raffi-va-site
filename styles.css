@@ -1,0 +1,170 @@
+:root {
+  --bg: #fff8f0;        /* warm cream */
+  --text: #3b2f2f;      /* deep brown */
+  --muted: #7a5c5c;     /* rose-brown */
+  --accent: #e07a5f;    /* terracotta */
+  --accent-2: #f2cc8f;  /* golden beige */
+  --surface: #f4e1d2;   /* pale peach */
+  --card: #ffe5d9;      /* soft pink */
+  --border: #e8cbb8;
+  --danger: #c0392b;
+  --font: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Links */
+a { color: #9c6644; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header & nav */
+.site-header { padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1rem; position: sticky; top: 0; background: rgba(255, 248, 240, 0.9); backdrop-filter: blur(6px);
+}
+.logo { font-weight: 700; letter-spacing: 0.3px; color: var(--text); }
+.nav-toggle { display: none; }
+.nav-links { list-style: none; display: flex; gap: 0.75rem; margin: 0; padding: 0; }
+.nav-links a { padding: 0.4rem 0.6rem; border-radius: 6px; }
+.nav-links .cta { background: var(--accent); color: #fff; font-weight: 600; }
+.nav-links .cta:hover { background: #d65a3f; }
+
+/* Hero */
+.hero {
+  padding: 3.5rem 1rem 2.5rem; max-width: 1100px; margin: 0 auto; text-align: center;
+  background: var(--surface); border-radius: 14px; border: 1px solid var(--border);
+}
+.hero h1 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin: 0.4rem 0 0.6rem; color: var(--accent); }
+.hero p { color: var(--muted); max-width: 720px; margin: 0 auto; }
+.meta { color: var(--muted); margin-top: 0.5rem; }
+.availability {
+  display: inline-block; padding: 0.25rem 0.6rem; background: #fde2d1; color: #9c3d23; border: 1px solid #f6c6a7; border-radius: 999px;
+  font-size: 0.9rem;
+}
+.hero-actions { display: flex; gap: 0.6rem; justify-content: center; margin-top: 0.9rem; }
+
+.btn { display: inline-block; padding: 0.7rem 1rem; border-radius: 10px; border: 1px solid var(--border); }
+.btn.primary { background: var(--accent); color: #fff; font-weight: 700; }
+.btn.secondary { background: var(--accent-2); color: var(--text); }
+.btn.primary:hover { background: #d65a3f; }
+.btn.secondary:hover { background: #e6b566; }
+
+/* Sections */
+.section { padding: 2.5rem 1rem; max-width: 1100px; margin: 0 auto; }
+.section.alt { background: var(--card); border-radius: 14px; border: 1px solid var(--border); }
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.card { background: #fff; padding: 1rem; border: 1px solid var(--border); border-radius: 12px; }
+.card h3 { margin-top: 0; }
+.outcomes { margin: 0.6rem 0 0; padding-left: 1rem; }
+
+/* Experience timeline */
+.timeline { display: grid; gap: 1rem; }
+.timeline article {
+  background: #fff; padding: 1rem; border: 1px solid var(--border); border-radius: 12px;
+}
+.bullets { margin: 0.6rem 0 0; padding-left: 1rem; }
+
+/* Skills with filters */
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0 1rem; }
+.filter-btn {
+  background: #fff; border: 1px solid var(--border); padding: 0.5rem 0.7rem; border-radius: 8px; cursor: pointer;
+}
+.filter-btn.active { background: var(--accent-2); }
+.skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.6rem; }
+.skill {
+  background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 0.6rem;
+}
+
+/* Slider */
+.slider { position: relative; overflow: hidden; }
+.slide { display: none; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+.slide.active { display: block; }
+.slider-controls { display: flex; gap: 0.5rem; justify-content: center; margin-top: 0.75rem; }
+.slider-controls button {
+  background: #fff; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.75rem; cursor: pointer;
+}
+.slider-controls button:hover { background: var(--accent-2); }
+
+/* Accordion (FAQ) */
+.accordion details {
+  background: #fff; margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: 10px; border: 1px solid var(--border);
+}
+
+/* Form */
+form { max-width: 640px; margin-top: 1rem; }
+.form-row { display: grid; gap: 0.35rem; margin-bottom: 0.85rem; }
+label { font-weight: 600; }
+input, textarea {
+  width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border); background: #fff; color: var(--text);
+}
+input:focus, textarea:focus { outline: 2px solid var(--accent-2); }
+.form-status { margin-top: 0.75rem; color: var(--muted); min-height: 1.25rem; }
+
+/* Footer */
+.site-footer { text-align: center; padding: 2rem 1rem; color: var(--muted); }
+
+/* Responsive nav */
+@media (max-width: 720px) {
+  .nav-toggle { display: inline-block; background: #fff; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem 0.55rem; }
+  .nav-links { display: none; flex-direction: column; gap: 0.5rem; background: var(--surface); padding: 0.75rem; border-radius: 8px; position: absolute; right: 1rem; top: 3rem; border: 1px solid var(--border); }
+  .nav-links.open { display: flex; }
+}
+/* Pricing section */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.price-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.price-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.price-card .price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem;
+  color: var(--text);
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.price-card ul li {
+  margin: 0.4rem 0;
+  color: var(--muted);
+}
+
+.price-card.featured {
+  border-color: var(--accent);
+  background: var(--card);
+}
