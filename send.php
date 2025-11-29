@@ -1,22 +1,43 @@
-<?php
+<?php<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect form data safely
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Your email address
-    $to = "raffi.ivanov-jones@virtualassitant.co.uk";
-    $subject = "New Contact Form Submission";
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
-    $headers = "From: $email";
+    $mail = new PHPMailer(true);
 
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
+    try {
+        // SMTP settings for PrivateEmail
+        $mail->isSMTP();
+        $mail->Host = 'mail.privateemail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'raffi.ivanov-jones@virtualassitant.co.uk';
+        $mail->Password = 'Missy23569.';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Sender and recipient
+        $mail->setFrom('info@yourdomain.com', 'Website Contact Form');
+        $mail->addAddress('raffi.ivanov-jones@virtualassitant.co.uk');
+
+        // Email content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body    = "<strong>Name:</strong> $name <br>
+                          <strong>Email:</strong> $email <br><br>
+                          <strong>Message:</strong><br>$message";
+
+        $mail->send();
         echo "Message sent successfully!";
-    } else {
-        echo "Sorry, there was a problem sending your message.";
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
-
 ?>
