@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Your email address
-    $to = "raffi.ivanov-jones@virtualassitant.co.uk"; // Replace with your real email
+    $to = "raffi.ivanov-jones@virtualassitant.co.uk";
     $subject = "New Contact Form Submission";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
     $headers = "From: $email";
@@ -18,4 +18,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Sorry, there was a problem sending your message.";
     }
 }
+
 ?>
