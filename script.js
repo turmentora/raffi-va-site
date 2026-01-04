@@ -70,19 +70,24 @@ if (form && statusEl) {
     statusEl.textContent = 'Sending...';
     const data = new FormData(form);
 
-    const res = await fetch('https://formsubmit.co/raffi.ivanov-jones@virtualassitant.co.uk', {
-      method: 'POST',
-      body: data,
-      headers: {
-        'Accept': 'application/json'
+    try {
+      const res = await fetch('https://formsubmit.co/raffi.ivanov-jones@virtualassitant.co.uk', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      const result = await res.json();
+      if (res.ok && result.success) {
+        statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
+        form.reset();
+      } else {
+        statusEl.textContent = 'Error: ' + (result.message || 'Please try again.');
       }
-    });
-    const result = await res.json();
-    if (res.ok) {
-      statusEl.textContent = 'Thanks — I’ll reply within 24 hours.';
-      form.reset();
-    } else {
+    } catch (error) {
       statusEl.textContent = 'Error sending message. Please try again.';
+      console.error('Form submission error:', error);
     }
   });
 }
