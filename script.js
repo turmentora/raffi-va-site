@@ -66,7 +66,7 @@ const form = document.getElementById('contact-form');
 const statusEl = document.querySelector('.form-status');
 if (form && statusEl) {
   form.addEventListener('submit', async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     statusEl.textContent = 'Sending...';
     const data = new FormData(form);
 
