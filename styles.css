@@ -248,3 +248,21 @@ input:focus, textarea:focus {
 body, .card, .price-card, form, .section, .hero, .nav-links a, .btn, input, textarea, .slide, .accordion details {
   color: #18122B !important;
 }
+.section, .section * {
+  color: #231942 !important;
+}
+.hero, .hero * {
+  color: #231942 !important;
+}
+.card, .card * {
+  color: #231942 !important;
+}
+.price-card, .price-card * {
+  color: #231942 !important;
+}
+form, form * {
+  color: #231942 !important;
+}
+.site-footer, .site-footer * {
+  color: #231942 !important;
+}
