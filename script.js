@@ -61,33 +61,7 @@ filterButtons.forEach(btn => {
   });
 });
 
-// Contact form (EmailJS integration)
-const form = document.getElementById('contact-form');
-const statusEl = document.querySelector('.form-status');
-if (form && statusEl) {
-  // Initialize EmailJS with your public key
-  emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    statusEl.textContent = 'Sending...';
-
-    const templateParams = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    };
-
-    try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams); // Replace with your service and template IDs
-      statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
-      form.reset();
-    } catch (error) {
-      statusEl.textContent = 'Error: Please try again.';
-      console.error('EmailJS error:', error);
-    }
-  });
-}
 
 // Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
