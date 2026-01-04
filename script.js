@@ -61,7 +61,7 @@ filterButtons.forEach(btn => {
   });
 });
 
-// Contact form (Formspree integration)
+// Contact form (Formsubmit integration)
 const form = document.getElementById('contact-form');
 const statusEl = document.querySelector('.form-status');
 if (form && statusEl) {
@@ -70,7 +70,7 @@ if (form && statusEl) {
     statusEl.textContent = 'Sending...';
     const data = new FormData(form);
 
-    const res = await fetch('https://formspree.io/f/mwvprydg', {
+    const res = await fetch('https://formsubmit.co/raffi.ivanov-jones@virtualassitant.co.uk', {
       method: 'POST',
       body: data,
       headers: {
