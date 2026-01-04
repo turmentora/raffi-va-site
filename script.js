@@ -61,43 +61,30 @@ filterButtons.forEach(btn => {
   });
 });
 
-// Contact form (Formspree integration)
+// Contact form (EmailJS integration)
 const form = document.getElementById('contact-form');
 const statusEl = document.querySelector('.form-status');
 if (form && statusEl) {
+  // Initialize EmailJS with your public key
+  emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     statusEl.textContent = 'Sending...';
-    const data = new FormData(form);
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+    const templateParams = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value
+    };
 
     try {
-      const res = await fetch('https://formspree.io/f/mwvprydg', {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        },
-        signal: controller.signal
-      });
-      clearTimeout(timeoutId);
-      const result = await res.json();
-      if (res.ok) {
-        statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
-        form.reset();
-      } else {
-        statusEl.textContent = 'Error: ' + (result.error || 'Please try again.');
-      }
+      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams); // Replace with your service and template IDs
+      statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
+      form.reset();
     } catch (error) {
-      clearTimeout(timeoutId);
-      if (error.name === 'AbortError') {
-        statusEl.textContent = 'Request timed out. Please try again.';
-      } else {
-        statusEl.textContent = 'Network error. Please try again.';
-      }
-      console.error('Form submission error:', error);
+      statusEl.textContent = 'Error: Please try again.';
+      console.error('EmailJS error:', error);
     }
   });
 }
