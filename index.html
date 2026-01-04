@@ -243,7 +243,7 @@ I bring together the structured documentation of an <strong>Administrative Offic
     <section id="contact" class="section alt">
       <h2>Contact</h2>
       <p>Prefer email? <a href="mailto:raffi.ivanov-jones@virtualassitant.co.uk">raffi.ivanov-jones@virtualassitant.co.uk</a></p>
-      <form action="https://formsubmit.co/raffi.ivanov-jones@virtualassitant.co.uk" method="POST" id="contact-form" name="contact" aria-label="Contact form">
+      <form action="https://formspree.io/f/mwvprydg" method="POST" id="contact-form" name="contact" aria-label="Contact form">
         <div class="form-row">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required />
@@ -256,9 +256,8 @@ I bring together the structured documentation of an <strong>Administrative Offic
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <input type="hidden" name="_captcha" value="0">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://www.virtualassitant.co.uk#contact">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_next" value="https://www.virtualassitant.co.uk/thank-you.html">
         <button class="btn primary" type="submit">Send message</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
