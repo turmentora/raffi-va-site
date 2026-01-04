@@ -324,4 +324,7 @@ input:focus, textarea:focus {
 
 .accordion details, .accordion details *, .card, .card *, .price-card, .price-card *, form, form *, .timeline article, .timeline article *, .slide, .slide *, .bullets li, .skill, .skill *, .skill-grid, .skill-grid * {
   color: #18122B !important;
+  color: var(--text) !important;
+  color: var(--text) !important;
+  color: var(--text) !important;
 }
