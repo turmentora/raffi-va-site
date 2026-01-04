@@ -1,7 +1,7 @@
 :root {
   --bg: #18122B;
-  --text: #e0e0e0;
-  --muted: #a0a0a0;
+  --text: #18122B;
+  --muted: #2a2a4e;
   --accent: #4a90e2;
   --accent-2: #7b68ee;
   --surface: #2a2a4e;
@@ -237,4 +237,8 @@ input:focus, textarea:focus {
   0% { box-shadow: 0 0 0 0 var(--accent); }
   70% { box-shadow: 0 0 0 10px rgba(74,144,226,0); }
   100% { box-shadow: 0 0 0 0 var(--accent); }
+}
+
+body, .card, .price-card, form, .section, .hero, .nav-links a, .btn, input, textarea, .slide, .accordion details {
+  color: #18122B !important;
 }
