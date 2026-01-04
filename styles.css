@@ -1,6 +1,6 @@
 :root {
   --bg: #18122B;
-  --text: #18122B;
+  --text: #fff;
   --muted: #2a2a4e;
   --accent: #4a90e2;
   --accent-2: #7b68ee;
@@ -145,7 +145,7 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
   box-shadow: 0 2px 8px rgba(123,104,238,0.15);
 }
 .accordion details summary {
-  color: #231942 !important;
+  color: #fff;
   font-weight: 600;
   font-size: 1.15rem;
   opacity: 1 !important;
@@ -243,26 +243,4 @@ input:focus, textarea:focus {
   0% { box-shadow: 0 0 0 0 var(--accent); }
   70% { box-shadow: 0 0 0 10px rgba(74,144,226,0); }
   100% { box-shadow: 0 0 0 0 var(--accent); }
-}
-
-body, .card, .price-card, form, .section, .hero, .nav-links a, .btn, input, textarea, .slide, .accordion details {
-  color: #18122B !important;
-}
-.section, .section * {
-  color: #231942 !important;
-}
-.hero, .hero * {
-  color: #231942 !important;
-}
-.card, .card * {
-  color: #231942 !important;
-}
-.price-card, .price-card * {
-  color: #231942 !important;
-}
-form, form * {
-  color: #231942 !important;
-}
-.site-footer, .site-footer * {
-  color: #231942 !important;
 }
