@@ -61,7 +61,31 @@ filterButtons.forEach(btn => {
   });
 });
 
+// Contact form (Formspree integration)
+const form = document.getElementById('contact-form');
+const statusEl = document.querySelector('.form-status');
+if (form && statusEl) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.textContent = 'Sending...';
+    const data = new FormData(form);
 
+    const res = await fetch('https://formspree.io/f/mwvprydg', {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    const result = await res.json();
+    if (res.ok) {
+      statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
+      form.reset();
+    } else {
+      statusEl.textContent = 'Error sending message. Please try again.';
+    }
+  });
+}
 
 // Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
