@@ -70,19 +70,34 @@ if (form && statusEl) {
     statusEl.textContent = 'Sending...';
     const data = new FormData(form);
 
-    const res = await fetch('https://formspree.io/f/mwvprydg', {
-      method: 'POST',
-      body: data,
-      headers: {
-        'Accept': 'application/json'
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
+    try {
+      const res = await fetch('https://formspree.io/f/mwvprydg', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        },
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+      const result = await res.json();
+      if (res.ok) {
+        statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
+        form.reset();
+      } else {
+        statusEl.textContent = 'Error: ' + (result.error || 'Please try again.');
       }
-    });
-    const result = await res.json();
-    if (res.ok) {
-      statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
-      form.reset();
-    } else {
-      statusEl.textContent = 'Error sending message. Please try again.';
+    } catch (error) {
+      clearTimeout(timeoutId);
+      if (error.name === 'AbortError') {
+        statusEl.textContent = 'Request timed out. Please try again.';
+      } else {
+        statusEl.textContent = 'Network error. Please try again.';
+      }
+      console.error('Form submission error:', error);
     }
   });
 }
