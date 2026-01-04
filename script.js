@@ -61,36 +61,7 @@ filterButtons.forEach(btn => {
   });
 });
 
-// Contact form (Formsubmit integration)
-const form = document.getElementById('contact-form');
-const statusEl = document.querySelector('.form-status');
-if (form && statusEl) {
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    statusEl.textContent = 'Sending...';
-    const data = new FormData(form);
 
-    try {
-      const res = await fetch('https://formsubmit.co/raffi.ivanov-jones@virtualassitant.co.uk', {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      const result = await res.json();
-      if (res.ok && result.success) {
-        statusEl.textContent = 'Thanks — I\'ll reply within 24 hours.';
-        form.reset();
-      } else {
-        statusEl.textContent = 'Error: ' + (result.message || 'Please try again.');
-      }
-    } catch (error) {
-      statusEl.textContent = 'Error sending message. Please try again.';
-      console.error('Form submission error:', error);
-    }
-  });
-}
 
 // Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
