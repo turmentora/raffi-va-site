@@ -153,12 +153,23 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
 /* Skills with filters */
 .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0 1rem; }
 .filter-btn {
-  background: #fff; border: 1px solid var(--border); padding: 0.5rem 0.7rem; border-radius: 8px; cursor: pointer;
+  background: hwb(270 0% 99%); border: 1px solid var(--border); padding: 0.5rem 0.7rem; border-radius: 8px; cursor: pointer;
 }
 .filter-btn.active { background: var(--accent-2); }
-.skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.6rem; }
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.6rem;
+  background: #2d193c;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
 .skill {
-  background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 0.6rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem;
+  cursor: pointer;
 }
 
 /* Slider */
