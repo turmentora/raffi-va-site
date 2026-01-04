@@ -144,6 +144,12 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
   color: var(--accent);
   box-shadow: 0 2px 8px rgba(123,104,238,0.15);
 }
+.accordion details summary {
+  color: #231942 !important;
+  font-weight: 600;
+  font-size: 1.15rem;
+  opacity: 1 !important;
+}
 
 /* Form */
 form {
