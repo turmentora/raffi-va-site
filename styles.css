@@ -302,6 +302,6 @@ input:focus, textarea:focus {
   100% { background-position: 400px 0; }
 }
 
-.card, .card *, .price-card, .price-card *, form, form *, .accordion details, .accordion details *, .slide, .slide * {
+.accordion details, .accordion details *, .card, .card *, .price-card, .price-card *, form, form *, .timeline article, .timeline article *, .slide, .slide *, .bullets li {
   color: #18122B !important;
 }
