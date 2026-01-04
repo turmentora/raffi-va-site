@@ -146,7 +146,7 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
 /* Experience timeline */
 .timeline { display: grid; gap: 1rem; }
 .timeline article {
-  background: #fff; padding: 1rem; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--card); padding: 1rem; border: 1px solid var(--border); border-radius: 12px;
 }
 .bullets { margin: 0.6rem 0 0; padding-left: 1rem; }
 
@@ -165,7 +165,7 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
   padding: 1.5rem;
 }
 .skill {
-  background: #fff;
+  background: #0d000e;
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.6rem;
@@ -174,11 +174,11 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
 
 /* Slider */
 .slider { position: relative; overflow: hidden; }
-.slide { display: none; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
+ .slide { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; }
 .slide.active { display: block; }
 .slider-controls { display: flex; gap: 0.5rem; justify-content: center; margin-top: 0.75rem; }
 .slider-controls button {
-  background: #fff; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.75rem; cursor: pointer;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.75rem; cursor: pointer;
   transition: background 0.3s, color 0.3s, transform 0.3s;
   color: var(--muted);
 }
@@ -190,7 +190,7 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
 
 /* Accordion (FAQ) */
 .accordion details {
-  background: #fff; margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--card); margin: 0.5rem 0; padding: 0.75rem 1rem; border-radius: 10px; border: 1px solid var(--border);
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 .accordion details[open] {
@@ -207,7 +207,7 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
 
 /* Form */
 form {
-  max-width: 640px; margin-top: 1rem; background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-width: 640px; margin-top: 1rem; background: var(--card); padding: 2rem; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   animation: slideUp 1s cubic-bezier(.77,0,.18,1) both;
 }
 .form-row { display: grid; gap: 0.35rem; margin-bottom: 1rem; }
@@ -234,7 +234,7 @@ input:focus, textarea:focus {
 
 /* Responsive nav */
 @media (max-width: 720px) {
-  .nav-toggle { display: inline-block; background: #fff; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem 0.55rem; }
+  .nav-toggle { display: inline-block; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem 0.55rem; }
   .nav-links { display: none; flex-direction: column; gap: 0.5rem; background: var(--surface); padding: 0.75rem; border-radius: 8px; position: absolute; right: 1rem; top: 3rem; border: 1px solid var(--border); }
   .nav-links.open { display: flex; }
 }
