@@ -978,6 +978,35 @@ input, textarea {
   .mobile-cta .btn { width: 100%; }
   z-index: 1;
 }
+
+/* Force readable nav text (final override) */
+nav .nav-links,
+nav .nav-links.open {
+  background: #0b1020 !important;
+  border: 2px solid #7c3aed !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7) !important;
+}
+
+nav .nav-links a {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  text-shadow: none !important;
+  background: #1f2937 !important;
+  border: 1px solid #374151 !important;
+  padding: 0.6rem 0.9rem !important;
+  border-radius: 10px !important;
+}
+
+nav .nav-links a:hover {
+  background: #334155 !important;
+}
+
+nav .nav-links a.cta {
+  background: #7c3aed !important;
+  border-color: #7c3aed !important;
+  color: #ffffff !important;
+}
     70% { box-shadow: 0 0 0 8px rgba(74,74,110,0); }
 .card h3 {
   margin-top: 0;
