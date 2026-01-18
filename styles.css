@@ -443,6 +443,52 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px
   100% { background-position: 400px 0; }
 }
 
+/* RESET NAV STYLES — CLEAN, READABLE */
+html body header.site-header nav.nav {
+  background: #0b1020 !important;
+  border-bottom: 2px solid #ffffff !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+html body header.site-header nav.nav .logo {
+  color: #ffffff !important;
+}
+
+html body header.site-header nav.nav .nav-toggle {
+  color: #ffffff !important;
+  background: #0b1020 !important;
+  border: 1px solid #ffffff !important;
+}
+
+html body header.site-header nav.nav .nav-links {
+  background: #0b1020 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+html body header.site-header nav.nav .nav-links li a,
+html body header.site-header nav.nav .nav-links li a:visited,
+html body header.site-header nav.nav .nav-links li a:hover,
+html body header.site-header nav.nav .nav-links li a:active {
+  color: #ffffff !important;
+  background: #000000 !important;
+  border: 2px solid #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 12px !important;
+}
+
+html body header.site-header nav.nav .nav-links li a.cta {
+  background: #000000 !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
 /* FINAL, ABSOLUTE NAV FIX */
 html body header.site-header nav.nav {
   background: #0b1020 !important;
