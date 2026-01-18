@@ -17,7 +17,7 @@
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
-      <a class="logo" href="#home">Radoslav VA</a>
+      <a class="logo" href="#home"><span class="logo-mark" aria-hidden="true">RJ</span> Radoslav VA</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
@@ -31,23 +31,66 @@
 
     <section id="home" class="hero">
       <p class="availability" aria-live="polite">Taking on 2 new clients this month</p>
-      <h1>Virtual assistant for precision, reliability, and clear outcomes</h1>
-      <div>
-        <p>
-I bring together the structured documentation of an <strong>Administrative Officer</strong>, the decision-ready briefing of an <strong>Executive Officer</strong>, and the calm, confident communication of a <strong>Telephony Advisor</strong>. Whether you need flexible hourly support, a steady monthly retainer, or a defined project package, my services are designed to give you clarity, accountability, and peace of mind. With me as your virtual assistant, you gain not just task completion — but reliable systems, clear outcomes, and a partner who values precision and care.
-</p>
-        <p>
-        Administrative excellence, executive-level support, and confident telephony — delivered with calm, person-centred care.</p>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Virtual assistant for precision, reliability, and clear outcomes</h1>
+          <p>
+            I bring together the structured documentation of an <strong>Administrative Officer</strong>, the decision-ready briefing of an <strong>Executive Officer</strong>, and the calm, confident communication of a <strong>Telephony Advisor</strong>. Whether you need flexible hourly support, a steady monthly retainer, or a defined project package, my services are designed to give you clarity, accountability, and peace of mind.
+          </p>
+          <p>Administrative excellence, executive-level support, and confident telephony — delivered with calm, person-centred care.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Book a free intro call</a>
+            <a class="btn secondary" href="#services">See how I help</a>
+          </div>
+          <p class="meta">UK-based (GMT), responsive within agreed hours, NDA-friendly.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 360 360" role="presentation">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#c4b5fd" />
+                <stop offset="1" stop-color="#7c3aed" />
+              </linearGradient>
+              <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f5d0fe" />
+                <stop offset="1" stop-color="#a78bfa" />
+              </linearGradient>
+            </defs>
+            <circle cx="180" cy="180" r="140" fill="url(#g1)" opacity="0.35" />
+            <circle cx="115" cy="140" r="70" fill="url(#g2)" opacity="0.6" />
+            <circle cx="245" cy="240" r="55" fill="url(#g2)" opacity="0.45" />
+            <rect x="90" y="190" width="180" height="92" rx="18" fill="#1f1230" opacity="0.65" />
+            <rect x="110" y="210" width="140" height="10" rx="5" fill="#ffffff" opacity="0.6" />
+            <rect x="110" y="232" width="120" height="10" rx="5" fill="#ffffff" opacity="0.45" />
+            <rect x="110" y="254" width="100" height="10" rx="5" fill="#ffffff" opacity="0.35" />
+          </svg>
+        </div>
       </div>
-      <div class="hero-actions">
-        <a class="btn primary" href="#contact">Book a free intro call</a>
-        <a class="btn secondary" href="#services">See how I help</a>
-      </div>
-      <p class="meta">UK-based (GMT), responsive within agreed hours, NDA-friendly.</p>
     </section>
   </header>
 
+  <div class="mobile-cta" role="region" aria-label="Quick booking">
+    <a class="btn primary" href="#contact">Book a free intro call</a>
+  </div>
+
   <main>
+    <section class="section results-strip" aria-label="Results">
+      <div class="results-grid">
+        <div class="result-item">
+          <strong>40%</strong>
+          <span>Fewer meeting overruns</span>
+        </div>
+        <div class="result-item">
+          <strong>2 weeks</strong>
+          <span>To build reliable admin systems</span>
+        </div>
+        <div class="result-item">
+          <strong>24 hrs</strong>
+          <span>Typical response window</span>
+        </div>
+      </div>
+    </section>
+
     <section id="services" class="section">
       <h2>Services</h2>
       <div class="cards">
@@ -247,6 +290,27 @@ I bring together the structured documentation of an <strong>Administrative Offic
   </div>
 </section>
 
+    <section id="process" class="section alt">
+      <h2>Process</h2>
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="step">01</span>
+          <h3>Discover</h3>
+          <p>We map your priorities, tools, and outcomes in a short intro call.</p>
+        </article>
+        <article class="process-step">
+          <span class="step">02</span>
+          <h3>Systemise</h3>
+          <p>I set up clear workflows, templates, and tracking for consistent delivery.</p>
+        </article>
+        <article class="process-step">
+          <span class="step">03</span>
+          <h3>Deliver</h3>
+          <p>You get reliable updates, clean documentation, and measurable progress.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="contact" class="section alt">
       <h2>Contact</h2>
       <p>Prefer email? <a href="mailto:raffi.ivanov-jones@virtualassitant.co.uk">raffi.ivanov-jones@virtualassitant.co.uk</a></p>
@@ -269,6 +333,16 @@ I bring together the structured documentation of an <strong>Administrative Offic
       <p class="privacy-note">By submitting, you consent to being contacted about services. No data is sold.</p>
     </section>
   </main>
+
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="cta-banner-inner">
+      <div>
+        <h2>Ready for calm, reliable support?</h2>
+        <p>Book a free intro call and get a tailored plan within 24 hours.</p>
+      </div>
+      <a class="btn primary" href="#contact">Book a free intro call</a>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <p>© <span id="year"></span> Radoslav Ivanov-Jones — Virtual Assistant</p>
