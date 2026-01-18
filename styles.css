@@ -3,7 +3,7 @@
 :root {
   --bg: #24122f;
   --text: #ffffff;
-  --muted: #c9b7f2;
+  --muted: #d9cef9;
   --accent: #7c3aed;
   --accent-2: #b9a2ff;
   --surface: #3a1e52;
@@ -118,7 +118,7 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
   gap: 2rem;
 }
 .hero-content { text-align: left; }
-.hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.4rem 0 0.8rem; color: #f5e9ff; font-weight: 700; }
+.hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.4rem 0 0.8rem; color: var(--text); font-weight: 700; }
 .hero p { color: var(--muted); max-width: 720px; margin: 0 0 1rem; font-size: 1.05rem; }
 .hero-actions { display: flex; gap: 0.6rem; justify-content: flex-start; margin-top: 0.5rem; flex-wrap: wrap; }
 .hero-visual {
@@ -351,6 +351,37 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px
   background-size: 800px 100%;
   animation: shimmer 3.8s infinite linear;
   z-index: 0;
+}
+
+:root[data-theme="light"] body { background: #f7f4ff; color: #1c1530; }
+:root[data-theme="light"] .hero h1 { color: #2a1b42; }
+:root[data-theme="light"] .hero p,
+:root[data-theme="light"] .meta,
+:root[data-theme="light"] .muted { color: #4b3a6b; }
+:root[data-theme="light"] .hero-visual { background: #f6f2ff; border-color: #d7c9fb; }
+:root[data-theme="light"] .results-grid,
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .timeline article,
+:root[data-theme="light"] .slide,
+:root[data-theme="light"] .accordion details,
+:root[data-theme="light"] .price-card,
+:root[data-theme="light"] .process-step,
+:root[data-theme="light"] .skill,
+:root[data-theme="light"] form,
+:root[data-theme="light"] .case-card,
+:root[data-theme="light"] .persona-card,
+:root[data-theme="light"] .trust-item {
+  background: #ffffff;
+  color: #1c1530;
+  border-color: #d7c9fb;
+}
+:root[data-theme="light"] .price-card ul li,
+:root[data-theme="light"] .result-item span {
+  color: #5a4a7a;
+}
+:root[data-theme="light"] .card::before,
+:root[data-theme="light"] .price-card::before {
+  opacity: 0.08;
 }
 .price-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
 .price-card h3 { margin-top: 0; color: var(--accent-2); }
