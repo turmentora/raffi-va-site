@@ -79,3 +79,35 @@ if (featuredCard) {
   featuredCard.style.transform = 'scale(1.03)';
   featuredCard.style.boxShadow = '0 6px 16px rgba(0,0,0,0.15)';
 }
+
+// Theme toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const rootEl = document.documentElement;
+const storedTheme = localStorage.getItem('theme');
+const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+const initialTheme = storedTheme || (prefersLight ? 'light' : 'dark');
+rootEl.dataset.theme = initialTheme;
+if (themeToggle) {
+  themeToggle.setAttribute('aria-pressed', String(initialTheme === 'light'));
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = rootEl.dataset.theme === 'light' ? 'dark' : 'light';
+    rootEl.dataset.theme = nextTheme;
+    localStorage.setItem('theme', nextTheme);
+    themeToggle.setAttribute('aria-pressed', String(nextTheme === 'light'));
+  });
+}
+
+// Inline contact success state
+const formStatus = document.querySelector('.form-status');
+const contactForm = document.getElementById('contact-form');
+const urlParams = new URLSearchParams(window.location.search);
+if (formStatus && urlParams.get('sent') === '1') {
+  formStatus.textContent = 'Thanks — your message has been sent.';
+  formStatus.classList.add('success');
+}
+if (contactForm && formStatus) {
+  contactForm.addEventListener('submit', () => {
+    formStatus.textContent = 'Sending...';
+    formStatus.classList.remove('success', 'error');
+  });
+}

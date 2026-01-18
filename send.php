@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPDebug = 0;
 
         $mail->send();
-        header('Location: thank-you.html', true, 303);
+        header('Location: index.html?sent=1#contact', true, 303);
         exit;
     } catch (Exception $e) {
         http_response_code(500);

@@ -4,7 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Radoslav Ivanov-Jones — Virtual Assistant</title>
-  <meta name="description" content="Virtual assistant offering administrative support, scheduling, documentation, compliance, and telephony expertise for small businesses and professionals." />  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Virtual assistant offering administrative support, scheduling, documentation, compliance, and telephony expertise for small businesses and professionals." />
+  <meta name="theme-color" content="#7c3aed" />
+  <meta property="og:title" content="Radoslav Ivanov-Jones — Virtual Assistant" />
+  <meta property="og:description" content="Reliable virtual assistant support for inbox, scheduling, documentation, compliance, and telephony." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://turmentora.github.io/raffi-va-site/" />
+  <meta property="og:image" content="https://turmentora.github.io/raffi-va-site/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Radoslav Ivanov-Jones — Virtual Assistant" />
+  <meta name="twitter:description" content="Reliable virtual assistant support for inbox, scheduling, documentation, compliance, and telephony." />
+  <meta name="twitter:image" content="https://turmentora.github.io/raffi-va-site/og-image.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CX1ML55YNX"></script>
 <script>
@@ -18,13 +30,20 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
       <a class="logo" href="#home"><span class="logo-mark" aria-hidden="true">RJ</span> Radoslav VA</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
       <ul class="nav-links">
+        <li><a href="#who">Who I help</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#process">Process</a></li>
         <li><a class="cta" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -91,6 +110,39 @@
       </div>
     </section>
 
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,80 350,0 600,60 C850,120 1050,40 1200,80 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+
+    <section id="who" class="section">
+      <h2>Who I help</h2>
+      <p class="muted">Focused support for people who need clarity, structure, and reliable follow-through.</p>
+      <div class="who-grid">
+        <article class="persona-card">
+          <h3>Busy founders</h3>
+          <p>Inbox triage, scheduling, and decision-ready updates that protect focus time.</p>
+        </article>
+        <article class="persona-card">
+          <h3>Professional services</h3>
+          <p>Polished documentation, meeting minutes, and consistent client follow-up.</p>
+        </article>
+        <article class="persona-card">
+          <h3>Care & compliance teams</h3>
+          <p>Audit-ready checklists, clear records, and calm, confident communication.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section trust-row" aria-label="Trust signals">
+      <div class="trust-grid">
+        <div class="trust-item">NDA-friendly & confidential</div>
+        <div class="trust-item">GDPR-aware data handling</div>
+        <div class="trust-item">Response SLA by agreement</div>
+      </div>
+    </section>
+
     <section id="services" class="section">
       <h2>Services</h2>
       <div class="cards">
@@ -145,6 +197,12 @@
       </div>
     </section>
 
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,40 C200,120 400,0 600,60 C800,120 1000,20 1200,80 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+
     <section id="experience" class="section alt">
       <h2>Experience</h2>
       <div class="timeline">
@@ -178,6 +236,30 @@
       </div>
     </section>
 
+    <section class="section case-study" aria-label="Case study">
+      <div class="case-card">
+        <div>
+          <p class="eyebrow">Mini case study</p>
+          <h2>From reactive to reliable in 10 days</h2>
+          <p>A professional services team reduced inbox backlog and improved meeting outcomes with consistent briefs, minutes, and follow-ups.</p>
+        </div>
+        <div class="case-metrics">
+          <div>
+            <strong>-60%</strong>
+            <span>Inbox backlog</span>
+          </div>
+          <div>
+            <strong>+3 hrs</strong>
+            <span>Weekly focus time</span>
+          </div>
+          <div>
+            <strong>On time</strong>
+            <span>Minutes & actions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="skills" class="section">
       <h2>Skills</h2>
       <p class="muted">Core skills required for a Virtual Assistant, grouped for clarity.</p>
@@ -203,6 +285,12 @@
         <div class="skill" data-cat="communication"><strong>Writing:</strong> concise, structured, audience-aware</div>
       </div>
     </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,20 C200,60 400,0 600,60 C800,120 1000,40 1200,80 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
 
     <section id="testimonials" class="section alt">
       <h2>Testimonials</h2>
@@ -247,6 +335,10 @@
         <details>
           <summary>How do you communicate?</summary>
           <p>Clear, concise updates with closed-loop follow-up. I’ll confirm outcomes and next steps after calls or meetings.</p>
+        </details>
+        <details>
+          <summary>What about pricing and availability?</summary>
+          <p>Pricing is clear and fixed by plan. Availability is limited to keep quality high, and I’ll confirm open slots during our intro call.</p>
         </details>
       </div>
     </section>
