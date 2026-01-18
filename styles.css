@@ -1142,6 +1142,11 @@ input:focus, textarea:focus {
   background: var(--surface);
 }
 
+.site-footer a {
+  color: #cbd5f5;
+  text-decoration: underline;
+}
+
 /* Improve nav readability: make text dark and bold, increase contrast */
 .nav, .nav .logo, .nav-links a, .nav-toggle {
   color: #2d193c !important; /* dark text */
