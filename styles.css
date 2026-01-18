@@ -1015,6 +1015,33 @@ nav .nav-links a:hover,
 nav .nav-links a:active {
   color: #ffffff !important;
 }
+
+/* Desktop nav: force solid high-contrast pills */
+@media (min-width: 721px) {
+  nav .nav-links {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  nav .nav-links a {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+    text-shadow: none !important;
+    padding: 0.55rem 1rem !important;
+    border-radius: 12px !important;
+  }
+
+  nav .nav-links a:hover {
+    background: #1f2937 !important;
+  }
+
+  nav .nav-links a.cta {
+    background: #7c3aed !important;
+    border-color: #7c3aed !important;
+    color: #ffffff !important;
+  }
+}
     70% { box-shadow: 0 0 0 8px rgba(74,74,110,0); }
 .card h3 {
   margin-top: 0;
