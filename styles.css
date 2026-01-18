@@ -1003,9 +1003,10 @@ nav .nav-links a:hover {
 }
 
 nav .nav-links a.cta {
-  background: #7c3aed !important;
-  border-color: #7c3aed !important;
+  background: #111827 !important;
+  border-color: #374151 !important;
   color: #ffffff !important;
+  box-shadow: none !important;
 }
 
 /* Absolute color override: white text on dark */
