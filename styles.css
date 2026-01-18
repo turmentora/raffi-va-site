@@ -1061,6 +1061,28 @@ nav .nav-links a:active {
     text-shadow: none !important;
     opacity: 1 !important;
   }
+
+  /* Ultimate override to beat earlier light styles */
+  body .nav {
+    background: #0b1020 !important;
+    border-bottom: 2px solid #ffffff !important;
+  }
+
+  body .nav .logo,
+  body .nav .nav-toggle,
+  body .nav .nav-links a {
+    color: #ffffff !important;
+    background: #000000 !important;
+    border: 1px solid #ffffff !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  body .nav .nav-links a.cta {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+  }
 }
     70% { box-shadow: 0 0 0 8px rgba(74,74,110,0); }
 .card h3 {
