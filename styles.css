@@ -471,9 +471,13 @@ body {
 .nav-links {
   background: #111827 !important;
   border: 1px solid #1f2937 !important;
+  backdrop-filter: blur(6px);
 }
 
 .nav-links a { font-weight: 600 !important; font-size: 1rem; }
+.nav-links a { color: #ffffff !important; text-shadow: 0 2px 8px rgba(0,0,0,0.6) !important; }
+.nav-links a:not(.cta) { background: transparent !important; }
+.nav-links .cta { box-shadow: 0 6px 18px rgba(124,58,237,0.45) !important; }
 .nav-links a { transition: transform 0.3s ease, color 0.3s ease; }
 .nav-links a:hover { transform: translateY(-4px) scale(1.1); }
 
