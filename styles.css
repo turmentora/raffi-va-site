@@ -1007,6 +1007,14 @@ nav .nav-links a.cta {
   border-color: #7c3aed !important;
   color: #ffffff !important;
 }
+
+/* Absolute color override: white text on dark */
+nav .nav-links a,
+nav .nav-links a:visited,
+nav .nav-links a:hover,
+nav .nav-links a:active {
+  color: #ffffff !important;
+}
     70% { box-shadow: 0 0 0 8px rgba(74,74,110,0); }
 .card h3 {
   margin-top: 0;
