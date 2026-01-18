@@ -443,6 +443,48 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px
   100% { background-position: 400px 0; }
 }
 
+/* Readability overrides */
+body {
+  color: #f8fafc !important;
+  background: #0f172a !important;
+}
+
+.nav {
+  background: #0f172a !important;
+  border-bottom: 1px solid #1f2937 !important;
+}
+
+.nav .logo,
+.nav-links a,
+.nav-toggle {
+  color: #f8fafc !important;
+  text-shadow: none !important;
+}
+
+.nav-links {
+  background: #111827 !important;
+  border: 1px solid #1f2937 !important;
+}
+
+.nav-links a { font-weight: 600 !important; }
+
+.nav-links .cta {
+  background: #7c3aed !important;
+  color: #ffffff !important;
+}
+
+p, li, .muted, .meta { color: #cbd5f5 !important; }
+
+.card,
+.price-card,
+.slide,
+.accordion details,
+form {
+  color: #f8fafc !important;
+  background: #111827 !important;
+  border-color: #1f2937 !important;
+}
+
 /* Clean redesign overrides */
 :root {
   --clean-bg: #0f172a;
