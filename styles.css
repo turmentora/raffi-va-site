@@ -443,6 +443,32 @@ input:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px
   100% { background-position: 400px 0; }
 }
 
+/* FINAL, ABSOLUTE NAV FIX */
+html body header.site-header nav.nav {
+  background: #0b1020 !important;
+  border-bottom: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+html body header.site-header nav.nav .nav-links {
+  background: #0b1020 !important;
+  border: 2px solid #ffffff !important;
+}
+
+html body header.site-header nav.nav .nav-links li a {
+  color: #ffffff !important;
+  background: #000000 !important;
+  border: 2px solid #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+html body header.site-header nav.nav .nav-links li a.cta {
+  color: #ffffff !important;
+  background: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
 /* Final nav readability fix */
 @media (max-width: 720px) {
   .nav-links.open {
