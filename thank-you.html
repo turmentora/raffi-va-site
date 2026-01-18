@@ -7,36 +7,32 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo">Raffi Virtual Assistant</a>
-        <ul class="nav-links">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#testimonials">Testimonials</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      </div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="index.html#home">Radoslav VA</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#testimonials">Testimonials</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a class="cta" href="index.html#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section class="thank-you">
-      <div class="container">
-        <h1>Thank You!</h1>
-        <p>Your message has been sent successfully. I'll get back to you within 24 hours.</p>
-        <a href="index.html" class="btn primary">Back to Home</a>
-      </div>
+    <section class="section alt">
+      <h1>Thank you!</h1>
+      <p>Your message has been sent successfully. I’ll get back to you within 24 hours.</p>
+      <a href="index.html" class="btn primary">Back to Home</a>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Raffi Virtual Assistant. All rights reserved.</p>
-    </div>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Radoslav Ivanov-Jones — Virtual Assistant</p>
+    <p class="meta">Birkenhead, UK · GMT</p>
   </footer>
 
   <script src="script.js"></script>

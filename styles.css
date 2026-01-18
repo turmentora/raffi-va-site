@@ -1,8 +1,4 @@
 :root {
-  /* Force all text to be white across the site */
-  body, h1, h2, h3, h4, h5, h6, p, a, li, label, input, textarea, .card, .price-card, .slide, .timeline article, .accordion details, .skill, .skill-grid, .section, .nav, .nav-links, .nav-toggle, .site-footer, .btn, .filter-btn, .slider-controls button {
-    color: var(--text) !important;
-  }
   --bg: #2d193c;           /* deep purple background */
   --text: #fff;            /* white text for dark backgrounds */
   --muted: #b39ddb;        /* muted lavender */
@@ -47,7 +43,6 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
     color 0.3s,
     background 0.3s,
     transform 0.3s;
-  color: var(--accent-2);
   color: #2d193c !important;
   font-weight: 600 !important;
   text-shadow: 0 1px 2px #fff8f0;
@@ -103,11 +98,6 @@ a:hover { color: var(--accent-2); text-decoration: underline; }
   box-shadow: 0 6px 20px rgba(124,58,237,0.3);
 }
 .btn.secondary { background: var(--accent-2); color: var(--text); }
-.btn.primary:hover {
-  background: linear-gradient(135deg, #3a6ea5, #7b68ee);
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(74,144,226,0.4);
-}
 .btn.secondary:hover { background: #e6b566; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
 
 /* Sections */
@@ -345,12 +335,4 @@ input:focus, textarea:focus {
 @keyframes shimmer {
   0% { background-position: -400px 0; }
   100% { background-position: 400px 0; }
-}
-
-.accordion details, .accordion details *, .card, .card *, .price-card, .price-card *, form, form *, .timeline article, .timeline article *, .slide, .slide *, .bullets li, .skill, .skill *, .skill-grid, .skill-grid * {
-  color: #18122B !important;
-  color: #fff !important;
-  font-weight: 700 !important;
-  color: var(--text) !important;
-  color: var(--text) !important;
 }

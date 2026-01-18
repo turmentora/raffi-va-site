@@ -19,13 +19,13 @@
     <nav class="nav" aria-label="Primary">
       <a class="logo" href="#home">Radoslav VA</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-      <ul class="nav-links" role="menu">
-        <li><a href="#services" role="menuitem">Services</a></li>
-        <li><a href="#experience" role="menuitem">Experience</a></li>
-        <li><a href="#skills" role="menuitem">Skills</a></li>
-        <li><a href="#testimonials" role="menuitem">Testimonials</a></li>
-        <li><a href="#faq" role="menuitem">FAQ</a></li>
-        <li><a class="cta" href="#contact" role="menuitem">Contact</a></li>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="cta" href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -250,7 +250,7 @@ I bring together the structured documentation of an <strong>Administrative Offic
     <section id="contact" class="section alt">
       <h2>Contact</h2>
       <p>Prefer email? <a href="mailto:raffi.ivanov-jones@virtualassitant.co.uk">raffi.ivanov-jones@virtualassitant.co.uk</a></p>
-      <form action="https://formsubmit.co/raffi.ivanov-jones@virtualassitant.co.uk" method="POST" id="contact-form" name="contact" aria-label="Contact form">
+      <form action="send.php" method="POST" id="contact-form" name="contact" aria-label="Contact form">
         <div class="form-row">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required />
@@ -263,9 +263,6 @@ I bring together the structured documentation of an <strong>Administrative Offic
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <input type="hidden" name="_captcha" value="0">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://turmentora.github.io/raffi-va-site/thank-you.html">
         <button class="btn primary" type="submit">Send message</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
