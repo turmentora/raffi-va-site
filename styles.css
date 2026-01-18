@@ -449,6 +449,10 @@ body {
   background: linear-gradient(120deg, #0f172a, #111b36, #1b2346, #0f172a) !important;
   background-size: 300% 300% !important;
   animation: bgShift 10s ease-in-out infinite;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  text-rendering: optimizeLegibility;
 }
 
 .nav {
@@ -469,7 +473,7 @@ body {
   border: 1px solid #1f2937 !important;
 }
 
-.nav-links a { font-weight: 600 !important; }
+.nav-links a { font-weight: 600 !important; font-size: 1rem; }
 .nav-links a { transition: transform 0.3s ease, color 0.3s ease; }
 .nav-links a:hover { transform: translateY(-4px) scale(1.1); }
 
@@ -480,6 +484,7 @@ body {
 }
 
 p, li, .muted, .meta { color: #cbd5f5 !important; }
+p, li { font-size: 1.05rem; }
 
 .card,
 .price-card,
@@ -490,6 +495,19 @@ form {
   background: #111827 !important;
   border-color: #1f2937 !important;
   animation: floatIn 0.8s ease both, floatBob 2.6s ease-in-out infinite;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+  letter-spacing: 0.3px;
+}
+
+.lead { font-size: 1.15rem; }
+
+.card h3,
+.price-card h3,
+.accordion summary {
+  letter-spacing: 0.3px;
 }
 
 .price-card {
