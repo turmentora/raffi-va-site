@@ -1042,6 +1042,25 @@ nav .nav-links a:active {
     border-color: #7c3aed !important;
     color: #ffffff !important;
   }
+
+  /* FINAL OVERRIDE: make nav text fully readable */
+  nav .nav-links,
+  nav .nav-links.open {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  nav .nav-links a,
+  nav .nav-links a:visited,
+  nav .nav-links a:hover,
+  nav .nav-links a:active {
+    color: #ffffff !important;
+    background: #000000 !important;
+    border: 1px solid #ffffff !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
 }
     70% { box-shadow: 0 0 0 8px rgba(74,74,110,0); }
 .card h3 {
