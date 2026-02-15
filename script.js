@@ -58,3 +58,41 @@ if (contactForm && formStatus) {
     formStatus.textContent = 'Sending...';
   });
 }
+
+// GA4 ecommerce events (pricing plans)
+function isGtagReady() {
+  return typeof window.gtag === 'function';
+}
+
+function getPricingItems() {
+  return Array.from(document.querySelectorAll('.price-card')).map((card, index) => ({
+    item_id: card.dataset.itemId || `plan-${index + 1}`,
+    item_name: card.dataset.itemName || card.querySelector('h3')?.textContent?.trim() || `Plan ${index + 1}`,
+    item_category: card.dataset.itemCategory || 'Service Plan',
+    price: Number(card.dataset.itemPrice || 0),
+    index: index + 1
+  }));
+}
+
+if (isGtagReady()) {
+  const pricingItems = getPricingItems();
+  if (pricingItems.length) {
+    gtag('event', 'view_item_list', {
+      item_list_id: 'pricing-plans',
+      item_list_name: 'Pricing Plans',
+      items: pricingItems
+    });
+
+    document.querySelectorAll('.price-card').forEach((card, index) => {
+      card.addEventListener('click', () => {
+        const item = pricingItems[index];
+        if (!item) return;
+        gtag('event', 'select_item', {
+          item_list_id: 'pricing-plans',
+          item_list_name: 'Pricing Plans',
+          items: [item]
+        });
+      });
+    });
+  }
+}
