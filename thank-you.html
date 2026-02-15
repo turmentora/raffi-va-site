@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You - Raffi Virtual Assistant</title>
+  <link rel="canonical" href="https://turmentora.github.io/raffi-va-site/thank-you.html" />
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CX1ML55YNX"></script>
   <script>
@@ -15,6 +18,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <nav class="nav" aria-label="Primary">
       <a class="logo" href="index.html#home">Radoslav VA</a>
@@ -30,11 +34,11 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section alt">
       <h1>Thank you!</h1>
       <p>Your message has been sent successfully. I’ll get back to you within 24 hours.</p>
-      <a href="index.html" class="btn primary">Back to Home</a>
+      <a href="index.html" class="btn primary" data-cta="back-home">Back to Home</a>
     </section>
   </main>
 
@@ -43,6 +47,6 @@
     <p class="meta">Birkenhead, UK · GMT</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

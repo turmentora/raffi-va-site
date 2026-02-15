@@ -13,6 +13,7 @@ const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 let current = 0;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function showSlide(index) {
   slides.forEach((s, i) => s.classList.toggle('active', i === index));
@@ -28,7 +29,9 @@ function prevSlide() {
 if (prevBtn && nextBtn && slides.length) {
   nextBtn.addEventListener('click', nextSlide);
   prevBtn.addEventListener('click', prevSlide);
-  setInterval(nextSlide, 8000);
+  if (!prefersReducedMotion) {
+    setInterval(nextSlide, 8000);
+  }
 }
 
 // Dynamic year
@@ -41,7 +44,7 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
     }
   });
 });
@@ -62,6 +65,24 @@ if (contactForm && formStatus) {
 // GA4 ecommerce events (pricing plans)
 function isGtagReady() {
   return typeof window.gtag === 'function';
+}
+
+// CTA click tracking
+document.querySelectorAll('[data-cta]').forEach((cta) => {
+  cta.addEventListener('click', () => {
+    if (!isGtagReady()) return;
+    gtag('event', 'cta_click', {
+      cta_id: cta.getAttribute('data-cta') || cta.textContent?.trim() || 'unknown'
+    });
+  });
+});
+
+// Thank-you conversion event
+if (isGtagReady() && window.location.pathname.endsWith('thank-you.html')) {
+  gtag('event', 'generate_lead', {
+    currency: 'GBP',
+    value: 1
+  });
 }
 
 function getPricingItems() {

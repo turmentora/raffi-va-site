@@ -15,9 +15,31 @@
   <meta name="twitter:title" content="Radoslav Ivanov-Jones — Virtual Assistant" />
   <meta name="twitter:description" content="Reliable virtual assistant support for inbox, scheduling, documentation, compliance, and telephony." />
   <meta name="twitter:image" content="https://turmentora.github.io/raffi-va-site/og-image.svg" />
+  <link rel="canonical" href="https://turmentora.github.io/raffi-va-site/" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Radoslav Ivanov-Jones — Virtual Assistant",
+      "url": "https://turmentora.github.io/raffi-va-site/",
+      "image": "https://turmentora.github.io/raffi-va-site/og-image.svg",
+      "email": "raffi.ivanov-jones@virtualassitant.co.uk",
+      "areaServed": "GB",
+      "serviceType": [
+        "Inbox & scheduling",
+        "Documentation",
+        "Compliance support",
+        "Telephony & client care",
+        "Research & admin",
+        "Project support"
+      ]
+    }
+  </script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CX1ML55YNX"></script>
 <script>
@@ -28,6 +50,7 @@
 </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header" id="home">
     <nav class="nav" aria-label="Primary">
       <a class="logo" href="#home">Radoslav VA</a>
@@ -48,9 +71,10 @@
         <h1>Clear, calm support for busy teams and professionals.</h1>
         <p class="lead">Inbox triage, scheduling, documentation, compliance, and telephony — delivered with precision and care.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#contact">Book a free intro call</a>
-          <a class="btn secondary" href="#services">See services</a>
+          <a class="btn primary" href="#contact" data-cta="intro-call">Book a free intro call</a>
+          <a class="btn secondary" href="#services" data-cta="see-services">See services</a>
         </div>
+        <p class="muted">Typical response within 24 hours (business days).</p>
         <ul class="trust">
           <li>NDA-friendly</li>
           <li>GDPR-aware</li>
@@ -74,7 +98,7 @@
     </section>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="services" class="section">
       <div class="section-head">
         <h2>Services</h2>
@@ -240,6 +264,6 @@
     <p class="meta"><a href="privacy.html">Privacy notice</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
