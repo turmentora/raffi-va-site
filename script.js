@@ -52,6 +52,7 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
 // Inline contact success state
 const formStatus = document.querySelector('.form-status');
 const contactForm = document.getElementById('contact-form');
+const leadForm = document.querySelector('.lead-form');
 const urlParams = new URLSearchParams(window.location.search);
 if (formStatus && urlParams.get('sent') === '1') {
   formStatus.textContent = 'Thanks — your message has been sent.';
@@ -59,6 +60,14 @@ if (formStatus && urlParams.get('sent') === '1') {
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', () => {
     formStatus.textContent = 'Sending...';
+  });
+}
+if (leadForm) {
+  leadForm.addEventListener('submit', () => {
+    if (!isGtagReady()) return;
+    gtag('event', 'sign_up', {
+      method: 'lead_magnet'
+    });
   });
 }
 
